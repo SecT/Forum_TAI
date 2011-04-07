@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @subforum.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @subforum.desc %>
+</p>
+
+<h2>Threads</h2>
+<% @subforum.fthreads.each do |fthread| %>
+  <p>
+    <b>Title:</b>
+    <%= fthread.title %>
+  </p>
+
+<% end %>
+
+<h2>Add a thread:</h2>
+<%= form_for([@subforum, @subforum.fthreads.build]) do |f| %>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_subforum_path(@subforum) %> |
+<%= link_to 'Back', subforums_path %>

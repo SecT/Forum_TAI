@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @fthread.title %>
+</p>
+
+<p>
+  <b>Subforum:</b>
+  <%= @fthread.subforum %>
+</p>
+
+
+<%= link_to 'Edit', edit_fthread_path(@fthread) %> |
+<%= link_to 'Back', fthreads_path %>

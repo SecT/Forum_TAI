@@ -1,0 +1,47 @@
+#header{
+font-size: 14px;
+
+width: 960px;
+height: 100px;
+
+background-color: #0000F0;
+
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+}
+
+#main{
+
+width:960px;
+height: 500px;
+
+background-color: #00B900;
+
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+
+}
+
+#footer{
+font-size: 12px;
+
+width:960px;
+height: 100px;
+
+background-color: #0000F0;
+
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 5px;
+}
+
+
+.Post{
+margin-bottom: 5px;
+}
+
+.post_controls{
+float: right;
+}

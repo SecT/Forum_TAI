@@ -1,0 +1,25 @@
+<%= form_for(@fthread) do |f| %>
+  <% if @fthread.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fthread.errors.count, "error") %> prohibited this fthread from being saved:</h2>
+
+      <ul>
+      <% @fthread.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :subforum %><br />
+    <%= f.text_field :subforum %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

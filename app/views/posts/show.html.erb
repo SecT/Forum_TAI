@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class='Post'>
+
+
+<p>
+<span>
+  <b>Author:</b>
+  <%= @post.Author %>
+</span>
+
+<span>
+  <b>Utworzony:</b>
+  <%= @post.created_at.year.to_s+"."+@post.created_at.month.to_s+'.'+@post.created_at.day.to_s+'  '+@post.created_at.hour.to_s+':'+@post.created_at.min.to_s
+   %>
+</span>
+
+<%
+if @post.updated_at!=@post.created_at %>
+<span>
+  <b>Zmodyfikowany:</b>
+  <%= @post.updated_at.year.to_s+"."+@post.updated_at.month.to_s+'.'+@post.updated_at.day.to_s+'  '+@post.updated_at.hour.to_s+':'+@post.updated_at.min.to_s
+   %>
+   
+</span>
+<% end %>
+
+
+<span>
+  <b>Id:</b>
+  <%= @post.id %>
+</span>
+
+</p>
+
+
+<p>
+  <b>Content:</b>
+  <%= @post.Content %>
+</p>
+
+<div class='post_controls'>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %></div>
+
+</div>
